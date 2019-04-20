@@ -1,0 +1,16 @@
+TYPE=VIEW
+query=select `mikael`.`s_siswa`.`id_nis` AS `id_nis`,`mikael`.`s_siswa_det`.`nama` AS `nama_siswa`,`mikael`.`s_siswa_det`.`agama` AS `agama`,`mikael`.`s_siswa_det`.`telp` AS `telp`,(select concat(`mikael`.`s_thajaran`.`ajaranstart`,\'/\',`mikael`.`s_thajaran`.`ajaranend`)) AS `tahun`,(select concat(`mikael`.`s_kelas_det`.`kelas`,`mikael`.`s_jurusan`.`kodejurusan`,`mikael`.`s_kelas_det`.`abbr`)) AS `Kelas`,`mikael`.`s_parents`.`nama` AS `nama_ortu` from (((((`mikael`.`s_siswa` left join `mikael`.`s_parents` on((`mikael`.`s_siswa`.`id_parents` = `mikael`.`s_parents`.`id`))) left join `mikael`.`s_kelas_det` on((`mikael`.`s_siswa`.`id_kelas` = `mikael`.`s_kelas_det`.`id`))) left join `mikael`.`s_thajaran` on((`mikael`.`s_siswa`.`id_thajaran` = `mikael`.`s_thajaran`.`id`))) left join `mikael`.`s_siswa_det` on((`mikael`.`s_siswa`.`id_nis` = `mikael`.`s_siswa_det`.`nis`))) left join `mikael`.`s_jurusan` on((`mikael`.`s_kelas_det`.`idjurusan` = `mikael`.`s_jurusan`.`id`)))
+md5=6ad6d57da4dd832fe0309a4045ba12c7
+updatable=0
+algorithm=0
+definer_user=root
+definer_host=localhost
+suid=1
+with_check_option=0
+timestamp=2019-04-20 08:47:08
+create-version=2
+source=select `mikael`.`s_siswa`.`id_nis` AS `id_nis`,`mikael`.`s_siswa_det`.`nama` AS `nama_siswa`,`mikael`.`s_siswa_det`.`agama` AS `agama`,`mikael`.`s_siswa_det`.`telp` AS `telp`,(select concat(`mikael`.`s_thajaran`.`ajaranstart`,\'/\',`mikael`.`s_thajaran`.`ajaranend`)) AS `tahun`,(select concat(`mikael`.`s_kelas_det`.`kelas`,`mikael`.`s_jurusan`.`kodejurusan`,`mikael`.`s_kelas_det`.`abbr`)) AS `Kelas`,`mikael`.`s_parents`.`nama` AS `nama_ortu` from (((((`mikael`.`s_siswa` left join `mikael`.`s_parents` on((`mikael`.`s_siswa`.`id_parents` = `mikael`.`s_parents`.`id`))) left join `mikael`.`s_kelas_det` on((`mikael`.`s_siswa`.`id_kelas` = `mikael`.`s_kelas_det`.`id`))) left join `mikael`.`s_thajaran` on((`mikael`.`s_siswa`.`id_thajaran` = `mikael`.`s_thajaran`.`id`))) left join `mikael`.`s_siswa_det` on((`mikael`.`s_siswa`.`id_nis` = `mikael`.`s_siswa_det`.`nis`))) left join `mikael`.`s_jurusan` on((`mikael`.`s_kelas_det`.`idjurusan` = `mikael`.`s_jurusan`.`id`)))
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_unicode_ci
+view_body_utf8=select `mikael`.`s_siswa`.`id_nis` AS `id_nis`,`mikael`.`s_siswa_det`.`nama` AS `nama_siswa`,`mikael`.`s_siswa_det`.`agama` AS `agama`,`mikael`.`s_siswa_det`.`telp` AS `telp`,(select concat(`mikael`.`s_thajaran`.`ajaranstart`,\'/\',`mikael`.`s_thajaran`.`ajaranend`)) AS `tahun`,(select concat(`mikael`.`s_kelas_det`.`kelas`,`mikael`.`s_jurusan`.`kodejurusan`,`mikael`.`s_kelas_det`.`abbr`)) AS `Kelas`,`mikael`.`s_parents`.`nama` AS `nama_ortu` from (((((`mikael`.`s_siswa` left join `mikael`.`s_parents` on((`mikael`.`s_siswa`.`id_parents` = `mikael`.`s_parents`.`id`))) left join `mikael`.`s_kelas_det` on((`mikael`.`s_siswa`.`id_kelas` = `mikael`.`s_kelas_det`.`id`))) left join `mikael`.`s_thajaran` on((`mikael`.`s_siswa`.`id_thajaran` = `mikael`.`s_thajaran`.`id`))) left join `mikael`.`s_siswa_det` on((`mikael`.`s_siswa`.`id_nis` = `mikael`.`s_siswa_det`.`nis`))) left join `mikael`.`s_jurusan` on((`mikael`.`s_kelas_det`.`idjurusan` = `mikael`.`s_jurusan`.`id`)))
+mariadb-version=100137
